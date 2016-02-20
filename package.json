@@ -1,0 +1,17 @@
+{
+  "name": "bitwise2x32",
+  "description": "",
+  "version": "0.0.1",
+  "main": "bitwise2x32.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:deathcap/bitwise2x32.git"
+  },
+  "keywords": [
+    "voxel",
+    "plugin"
+  ],
+  "dependencies": {
+  },
+  "license": "MIT"
+}
