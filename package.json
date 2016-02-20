@@ -8,10 +8,17 @@
     "url": "git@github.com:deathcap/bitwise2x32.git"
   },
   "keywords": [
-    "voxel",
-    "plugin"
+    "bitwise",
+    "int64",
+    "int32x2",
+    "int2x32"
   ],
-  "dependencies": {
+  "scripts": {
+    "test": "node test.js"
   },
-  "license": "MIT"
+  "dependencies": {},
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.4.0"
+  }
 }
