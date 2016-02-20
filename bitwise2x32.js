@@ -15,5 +15,6 @@ function and(a, b) {
 }
 
 module.exports = {
+  signed32toUnsigned53,
   and
 };
