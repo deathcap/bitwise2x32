@@ -23,3 +23,7 @@ test('or', t => {
   t.deepEqual(bitwise2x32.or([0x11003300, 0xaa00cc00], [0x00220044, 0x00bb00dd]), [0x11223344, 0xaabbccdd]);
   t.end();
 });
+test('shift_left1', t => {
+  t.deepEqual(bitwise2x32.shift_left1([0x00000000, 0xf00000000]), [0x00000001, 0x70000000]);
+  t.end();
+});

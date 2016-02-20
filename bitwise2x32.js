@@ -26,7 +26,29 @@ function not(a) {
   return [~a[0], signed32toUnsigned53(~a[1])];
 }
 
-// TODO: << left shift
+function shift_left1(a) {
+  a = [a[0], a[1]];
+
+  a[1] *= 2;
+  a[0] *= 2;
+  if (a[1] > 0xffffffff) {
+    a[1] -= 0xffffffff;
+    a[0] += 1;
+  }
+  if (a[0] > 0xffffffff) {
+    // TODO
+  }
+  return a;
+}
+
+// << left shift n
+function shift_left(a, n) {
+  for (let i = 0; i < n; ++n) {
+    a = shift_left1(a);
+  }
+  return a;
+}
+
 // TODO: >>> right-shift zero fill
 
 module.exports = {
@@ -35,4 +57,6 @@ module.exports = {
   or,
   xor,
   not,
+  shift_left1,
+  shift_left,
 };
