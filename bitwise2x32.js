@@ -14,7 +14,25 @@ function and(a, b) {
   return [a[0] & b[0], signed32toUnsigned53(a[1] & b[1])];
 }
 
+function or(a, b) {
+  return [a[0] | b[0], signed32toUnsigned53(a[1] | b[1])];
+}
+
+function xor(a, b) {
+  return [a[0] ^ b[0], signed32toUnsigned53(a[1] ^ b[1])];
+}
+
+function not(a) {
+  return [~a[0], signed32toUnsigned53(~a[1])];
+}
+
+// TODO: << left shift
+// TODO: >>> right-shift zero fill
+
 module.exports = {
   signed32toUnsigned53,
-  and
+  and,
+  or,
+  xor,
+  not,
 };
